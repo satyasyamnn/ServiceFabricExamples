@@ -1,0 +1,29 @@
+Service Fabric
+
+Problem faced:
+
+1. With port hard coded in the configuration
+
+C:\KnowledgeBase\Azure\ServiceFabric\WebApi1\PackageRoot\ServiceManifest.xml
+ <Resources>
+    <Endpoints>
+      <!-- This endpoint is used by the communication listener to obtain the port on which to 
+           listen. Please note that if your service is partitioned, this port is shared with 
+           replicas of different partitions that are placed in your code. -->
+      <Endpoint Protocol="http" Name="ServiceEndpoint" Type="Input" Port="8702" />
+    </Endpoints>
+  </Resources>
+ Since Port is set to 8702, when multi node deployment is considered exceptions are seen for the reason as same port is used. To overcome this problem remove PORT attribute from the 
+ above configuration. By doing this service during hosting will be assigned a different port
+ 
+ 
+ 2. To implement example 2 
+ 
+ Microsoft.ServiceFabric.Services.Remoting is a nuget package required to be installed.
+ Microsoft.ServiceFabric.Services.Wcf.2.6.220 is a nuget package required to be installed.
+ Convert build configuration to make Client and sevice project to x64 --> with out this client doesnt work
+Marked ICalculatorService to have [ServiceContract]  and [OperationContract] 
+
+
+
+
