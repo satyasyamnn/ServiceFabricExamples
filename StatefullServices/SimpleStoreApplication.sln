@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "SimpleStoreApplication", "SimpleStoreApplication\SimpleStoreApplication.sfproj", "{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartService", "ShoppingCartService\ShoppingCartService.csproj", "{F76D43F5-4021-47C2-952B-0796843FD43E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStoreClient", "SimpleStoreClient\SimpleStoreClient.csproj", "{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8481011A-8D87-4877-8D70-61254BE53988}"
+	ProjectSection(SolutionItems) = preProject
+		ChangeLog.txt = ChangeLog.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Debug|x64.ActiveCfg = Debug|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Debug|x64.Build.0 = Debug|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Debug|x64.Deploy.0 = Debug|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Release|Any CPU.ActiveCfg = Release|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Release|x64.ActiveCfg = Release|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Release|x64.Build.0 = Release|x64
+		{BAD1CD7B-F402-4DF5-AD67-63E8FC666360}.Release|x64.Deploy.0 = Release|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Debug|x64.ActiveCfg = Debug|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Debug|x64.Build.0 = Debug|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Release|Any CPU.ActiveCfg = Release|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Release|x64.ActiveCfg = Release|x64
+		{F76D43F5-4021-47C2-952B-0796843FD43E}.Release|x64.Build.0 = Release|x64
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Debug|x64.ActiveCfg = Debug|x64
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Debug|x64.Build.0 = Debug|x64
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Release|x64.ActiveCfg = Release|Any CPU
+		{CCFEA007-3DBD-4BB8-BED8-6E022D2E1F38}.Release|x64.Build.0 = Release|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Debug|x64.ActiveCfg = Debug|x64
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Debug|x64.Build.0 = Debug|x64
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Release|x64.ActiveCfg = Release|Any CPU
+		{E6A0C385-10DA-49DF-A726-1CC26D0E9A49}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

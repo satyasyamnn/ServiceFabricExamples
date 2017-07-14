@@ -1,0 +1,22 @@
+
+Server Side Coding:
+
+Client Side Coding:
+
+NuGet:
+
+Microsoft.ServiceFabric
+Microsoft.ServiceFabric.Services
+Microsoft.ServiceFabric.Services.Wcf
+
+
+Proxy created inheriting from ServicePartitionClient<WcfCommunicationClient<IShoppingCartService>>, IShoppingCartService
+
+
+
+Partition Scheme
+
+http://henidak.com/2015/07/service-fabric-partitions/ 
+
+
+https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-content-roadmap
