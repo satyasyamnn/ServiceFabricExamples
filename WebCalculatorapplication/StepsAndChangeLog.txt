@@ -1,0 +1,6 @@
+1. Installed System.Net.Http.Formatting.Extension from Nuget
+2. Added System.Web.Routing reference to the project
+3. Installed Microsoft.AspNet.Mvc from Nuget to create Routes
+4. Installed Microsoft.AspNet.WebApi.Core from Nuget - to enable APIController creation
+5. Installed Microsoft.Owin from Nuget - to enable IAppBuilder 
+6. Installed Install-Package Microsoft.AspNet.WebApi.OwinSelfHost - to enable using appBuilder.UseWebApi(config);
