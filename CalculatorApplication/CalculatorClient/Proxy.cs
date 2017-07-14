@@ -13,12 +13,12 @@ namespace CalculatorClient
                : base(clientFactory, serviceName)
         {
         }
-        public Task<int> Add(int a, int b)
+        public Task<string> Add(int a, int b)
         {
             return this.InvokeWithRetryAsync(client => client.Channel.Add(a, b));
         }
 
-        public Task<int> Substract(int a, int b)
+        public Task<string> Substract(int a, int b)
         {
             return this.InvokeWithRetryAsync(client => client.Channel.Substract(a, b));
         }

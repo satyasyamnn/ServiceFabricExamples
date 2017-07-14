@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Fabric;
+using System.ServiceModel;
 using System.Threading.Tasks;
+
+using System.Fabric;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
-using System.ServiceModel;
 using Microsoft.ServiceFabric.Services.Communication.Wcf.Runtime;
+
 
 namespace CalculatorService
 {
@@ -18,14 +20,14 @@ namespace CalculatorService
             : base(context)
         { }
 
-        public Task<int> Add(int a, int b)
-        {
-            return Task.FromResult<int>(a + b);
+        public Task<string> Add(int a, int b)
+        {            
+            return Task.FromResult(string.Format("Instance {0} returns: {1}", Context.InstanceId, a + b));
         }
 
-        public Task<int> Substract(int a, int b)
+        public Task<string> Substract(int a, int b)
         {
-            return Task.FromResult<int>(a - b);
+            return Task.FromResult(string.Format("Instance {0} returns: {1}", Context.InstanceId, a - b));
         }
 
         /// <summary>

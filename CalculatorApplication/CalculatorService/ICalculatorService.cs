@@ -7,8 +7,8 @@ namespace CalculatorService
     public interface ICalculatorService 
     {
         [OperationContract]
-        Task<int> Add(int a, int b);
+        Task<string> Add(int a, int b);
         [OperationContract]
-        Task<int> Substract(int a, int b);
+        Task<string> Substract(int a, int b);
     }
 }

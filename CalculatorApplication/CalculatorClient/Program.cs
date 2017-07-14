@@ -4,6 +4,7 @@ using Microsoft.ServiceFabric.Services.Client;
 using System.Fabric;
 using System.ServiceModel;
 using Microsoft.ServiceFabric.Services.Communication.Wcf.Client;
+using System.Threading;
 
 namespace CalculatorClient
 {
@@ -11,12 +12,15 @@ namespace CalculatorClient
     {
         static void Main(string[] args)
         {
-            Uri ServiceName = new Uri("fabric:/CalculatorApplication/CalculatorService");
-            ServicePartitionResolver serviceResolver = new ServicePartitionResolver(() => new FabricClient());
-            NetTcpBinding binding = CreateClientConnectionBinding();
-            Proxy calcClient = new Proxy(new WcfCommunicationClientFactory<ICalculatorService>(binding, null, serviceResolver, null , null), ServiceName);
-            Console.WriteLine(calcClient.Add(3, 5).Result);
-            Console.ReadKey();
+            while (true)
+            {
+                Uri ServiceName = new Uri("fabric:/CalculatorApplication/CalculatorService");
+                ServicePartitionResolver serviceResolver = new ServicePartitionResolver(() => new FabricClient());
+                NetTcpBinding binding = CreateClientConnectionBinding();
+                Proxy calcClient = new Proxy(new WcfCommunicationClientFactory<ICalculatorService>(binding, null, serviceResolver, null, null), ServiceName);
+                Console.WriteLine(calcClient.Add(3, 5).Result);
+                Thread.Sleep(3000);
+            }            
         }
 
         private static NetTcpBinding CreateClientConnectionBinding()
