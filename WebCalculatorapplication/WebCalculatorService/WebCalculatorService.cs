@@ -14,9 +14,9 @@ namespace WebCalculatorService
     /// </summary>
     internal sealed class WebCalculatorService : StatelessService
     {
-        public WebCalculatorService(StatelessServiceContext context)
-            : base(context)
-        { }
+        public WebCalculatorService(StatelessServiceContext context) : base(context)
+        {
+        }
 
         /// <summary>
         /// Optional override to create listeners (e.g., TCP, HTTP) for this service replica to handle client or user requests.

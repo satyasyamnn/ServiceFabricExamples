@@ -7,6 +7,11 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "WebCalculatorapplication", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalculatorService", "WebCalculatorService\WebCalculatorService.csproj", "{BF741890-8025-46F6-9B23-FC30E287CE40}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15637A44-4A05-44B5-8E5F-11D09B73D021}"
+	ProjectSection(SolutionItems) = preProject
+		StepsAndChangeLog.txt = StepsAndChangeLog.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

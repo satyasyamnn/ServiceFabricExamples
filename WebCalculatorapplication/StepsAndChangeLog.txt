@@ -1,3 +1,5 @@
+Change Log:
+
 1. Installed System.Net.Http.Formatting.Extension from Nuget
 2. Added System.Web.Routing reference to the project
 3. Installed Microsoft.AspNet.Mvc from Nuget to create Routes
