@@ -25,12 +25,18 @@ namespace SimpleStoreClient
                 UnitPrice = 329.0,
                 Amount = 2
             }).Wait();
-
+            PrintPartition(proxy);
             IList<ShoppingCartItem> items = proxy.GetItems().Result;
             Console.WriteLine(items.Count);
-
+            PrintPartition(proxy);
             Console.ReadKey();
+        }
 
+        private static void PrintPartition(Proxy proxy)
+        {
+            ResolvedServicePartition partition;
+            if (proxy.TryGetLastResolvedServicePartition(out partition))
+                Console.WriteLine(partition.Info.Id);
         }
 
         private static NetTcpBinding CreateClientConnectionBinding()
