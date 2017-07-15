@@ -9,6 +9,7 @@ using Common;
 using System.ServiceModel;
 using Microsoft.ServiceFabric.Services.Communication.Wcf.Runtime;
 using Microsoft.ServiceFabric.Data.Collections;
+using System.Threading;
 
 namespace ShoppingCartService
 {
@@ -52,7 +53,14 @@ namespace ShoppingCartService
             var cart = await StateManager.GetOrAddAsync<IReliableDictionary<string, ShoppingCartItem>>("myCart");
             using (var tx = StateManager.CreateTransaction())
             {
-              
+                var cartItems = await cart.CreateEnumerableAsync(tx);
+                using (var asyncEnumerator = cartItems.GetAsyncEnumerator())
+                {
+                    while (await asyncEnumerator.MoveNextAsync(CancellationToken.None))
+                    {
+                        items.Add(asyncEnumerator.Current.Value);
+                    }
+                }
             }
             return items;
         }

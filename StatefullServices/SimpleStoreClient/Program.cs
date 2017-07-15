@@ -6,6 +6,7 @@ using Microsoft.ServiceFabric.Services.Client;
 using Microsoft.ServiceFabric.Services.Communication.Wcf.Client;
 
 using Common;
+using System.Collections.Generic;
 
 namespace SimpleStoreClient
 {
@@ -24,6 +25,9 @@ namespace SimpleStoreClient
                 UnitPrice = 329.0,
                 Amount = 2
             }).Wait();
+
+            IList<ShoppingCartItem> items = proxy.GetItems().Result;
+            Console.WriteLine(items.Count);
 
             Console.ReadKey();
 
