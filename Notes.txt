@@ -1,0 +1,28 @@
+Understand Actor Pattern:
+
+1. Reliable actors API provides as asynchronous, single threaded programming model using actors ????
+
+2. Model enables to mimic singleton and single threaded implementation
+
+Actor encapsulates certain states and behaviours.
+
+Actor can be Statefull  or stateless actor  --> State of an actor is managed actor state provider, which can save state to either memory on disk or external storage
+
+Lifetime of an actor:
+
+Actors are virtual. When Actor is needed, actor proxy is used to send a message to it. Service fabric will activate the actor if it hasnt been activated or it is deactivated. 
+
+*Concurrency 
+	-- Service Fabric guarentees only one method is called at any given time
+	-- Actor provide a turn based concurrency mode 
+	-- when a method is executing, new requests will wait asynchronously for the lock until they can aquire the actor-level lock.
+	-- The actor level lock is released only when the running method returns and the returned task completes.
+	-- if a method doesnt modify state, it can be marked readonly
+	-- Actors allow reentry by default i.e. if actor a calls actor b which inturn calls actor a it is allowed as it is single logical call chain context.
+	-- you can mark an actor not to allow reentrancy
+	-- 
+
+
+Code changes
+
+Installed Microsoft.ServiceFabric.Actors to TicTacToeClient
