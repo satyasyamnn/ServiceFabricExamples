@@ -73,9 +73,16 @@ namespace Game
             return Task.FromResult(true);
         }
 
-        Task<bool> IGame.MakeMoveAsycn(long playerId, int x, int y)
-        {
-            throw new NotImplementedException();
+        Task<bool> IGame.MakeMoveAsync(long playerId, int x, int y)
+        {            
+            Func<int, int, bool> isMoveValid = (pointX, pointY) => { return pointX < 0 || pointY > 2 || pointY < 0 || pointY > 2 };
+            Predicate<ActorState> invalidMoves = (state) => state.NumberOfMoves >= 9;
+            Predicate<ActorState> invalidPlayersRegistered = (state) => state.Players.Count != 2;
+            Predicate<ActorState> isWinnerDeclared = (state) => state.Winner != string.Empty;
+
+            if (isMoveValid(x, y) || invalidMoves(_state) || invalidPlayersRegistered(_state) || isWinnerDeclared(_state))
+                return Task.FromResult(false);
+
         }
     }
 }

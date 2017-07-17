@@ -13,6 +13,6 @@ namespace Game.Interfaces
         Task<bool> JoinGameAsync(long playerId, string playerName);
         Task<int[]> GetGameBoardAsync();
         Task<string> GetWinnderAsync();
-        Task<bool> MakeMoveAsycn(long playerId, int x, int y);
+        Task<bool> MakeMoveAsync(long playerId, int x, int y);
     }
 }

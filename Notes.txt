@@ -13,6 +13,7 @@ Lifetime of an actor:
 Actors are virtual. When Actor is needed, actor proxy is used to send a message to it. Service fabric will activate the actor if it hasnt been activated or it is deactivated. 
 
 *Concurrency 
+
 	-- Service Fabric guarentees only one method is called at any given time
 	-- Actor provide a turn based concurrency mode 
 	-- when a method is executing, new requests will wait asynchronously for the lock until they can aquire the actor-level lock.
@@ -20,8 +21,6 @@ Actors are virtual. When Actor is needed, actor proxy is used to send a message 
 	-- if a method doesnt modify state, it can be marked readonly
 	-- Actors allow reentry by default i.e. if actor a calls actor b which inturn calls actor a it is allowed as it is single logical call chain context.
 	-- you can mark an actor not to allow reentrancy
-	-- 
-
 
 Code changes
 
